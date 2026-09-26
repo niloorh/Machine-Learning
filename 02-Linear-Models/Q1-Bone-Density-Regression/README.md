@@ -66,9 +66,9 @@ The regression model is evaluated using three complementary error metrics.
 
 Mean Squared Error measures the average squared difference between the actual and predicted values:
 
-$$
-\operatorname{MSE}=\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2
-$$
+```text
+MSE = (1/n) × Σ(yᵢ - ŷᵢ)²
+```
 
 Because errors are squared, larger prediction errors receive a greater penalty.
 
@@ -76,9 +76,9 @@ Because errors are squared, larger prediction errors receive a greater penalty.
 
 Root Mean Squared Error is the square root of MSE:
 
-$$
-\operatorname{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i-\hat{y}_i)^2}
-$$
+```text
+RMSE = √[(1/n) × Σ(yᵢ - ŷᵢ)²]
+```
 
 RMSE is expressed in the same unit as the target variable, making the magnitude of the prediction error easier to interpret while retaining sensitivity to larger errors.
 
@@ -86,9 +86,9 @@ RMSE is expressed in the same unit as the target variable, making the magnitude 
 
 Mean Absolute Error measures the average absolute difference between predicted and observed values:
 
-$$
-\operatorname{MAE}=\frac{1}{n}\sum_{i=1}^{n}|y_i-\hat{y}_i|
-$$
+```text
+MAE = (1/n) × Σ|yᵢ - ŷᵢ|
+```
 
 Unlike MSE and RMSE, MAE does not square individual errors and is therefore less strongly influenced by unusually large prediction errors.
 

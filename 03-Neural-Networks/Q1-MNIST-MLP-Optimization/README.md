@@ -56,14 +56,17 @@ The model is a feed-forward multilayer perceptron implemented with PyTorch.
 
 The forward pass is:
 
-$$
-\mathbf{x}\rightarrow\operatorname{Flatten}\rightarrow
-\operatorname{Linear}(784,512)\rightarrow\operatorname{ReLU}\rightarrow
-\operatorname{Dropout}\rightarrow
-\operatorname{Linear}(512,256)\rightarrow\operatorname{ReLU}\rightarrow
-\operatorname{Dropout}\rightarrow
-\operatorname{Linear}(256,10)
-$$
+```text
+Input (28 × 28)
+→ Flatten (784)
+→ Linear (784 → 512)
+→ ReLU
+→ Dropout
+→ Linear (512 → 256)
+→ ReLU
+→ Dropout
+→ Linear (256 → 10)
+```
 
 The model produces raw logits, and `CrossEntropyLoss` is used as the training objective.
 
